@@ -64,6 +64,6 @@ If any file needs to be updated or removed, please open an issue or contact the 
 ## 🧑‍💻 Maintainer
 
 **Varag**  
-GitHub: [@varagg](https://github.com/varagg)
+Instagram: [@i_varag](https://www.instagram.com/i_varag/)
 
 ---
