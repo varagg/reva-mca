@@ -21,46 +21,6 @@ This repository aims to:
 
 ---
 
-## 📂 Repository Structure
-
-## 📂 Repository Structure (Visual)
-
-```mermaid
-graph TD
-    A[reva-mca] --> B[I Sem]
-    A --> C[II Sem]
-    A --> D[III Sem]
-    A --> E[IV Sem]
-    A --> R[README.md]
-
-    B --> B1[Notes]
-    B --> B2[IA1]
-    B --> B3[IA2]
-    B --> B4[SEE]
-    B --> B5[Lab]
-
-    B1 --> B1a[Subject Notes]
-    B1 --> B1b[PDFs & Resources]
-
-    B2 --> B2a[IA-1 Question Papers]
-    B3 --> B3a[IA-2 Question Papers]
-    B4 --> B4a[SEE Question Papers]
-    B5 --> B5a[Lab Programs]
-
-    C --> C1[Notes]
-    C --> C2[IA1]
-    C --> C3[IA2]
-    C --> C4[SEE]
-    C --> C5[Lab]
-
-    C1 --> C1a[Subject Notes]
-    C1 --> C1b[PDFs & Resources]
-
-    D --> D1[Notes / IA / SEE / Lab]
-    E --> E1[Notes / IA / SEE / Lab]
-
----
-
 ## 🧭 How to Use This Repository
 
 1. Navigate to your **semester folder**
