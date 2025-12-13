@@ -1,0 +1,46 @@
+# B2: ANN (MLPClassifier) with Backpropagation on Iris
+
+# 1) Imports
+from sklearn import datasets
+from sklearn.model_selection import train_test_split
+from sklearn.neural_network import MLPClassifier
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+
+# 2) Load dataset
+iris = datasets.load_iris()
+X = iris.data
+y = iris.target
+
+# 3) Train-test split
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.3, random_state=42
+)
+
+# 4) Scale features (helps ANN converge better)
+scaler = StandardScaler()
+X_train_s = scaler.fit_transform(X_train)
+X_test_s = scaler.transform(X_test)
+
+# 5) Build MLP model (1 hidden layer with 10 neurons, ReLU, Adam)
+mlp = MLPClassifier(
+    hidden_layer_sizes=(10,),
+    activation='relu',
+    solver='adam',
+    max_iter=1000,
+    random_state=42
+)
+
+# 6) Train (fit)
+mlp.fit(X_train_s, y_train)
+
+# 7) Predict
+y_pred = mlp.predict(X_test_s)
+
+# 8) Evaluate
+acc = accuracy_score(y_test, y_pred)
+print(f"Accuracy: {acc*100:.2f}%")
+print("\nClassification report:")
+print(classification_report(y_test, y_pred, target_names=iris.target_names))
+print("Confusion Matrix:")
+print(confusion_matrix(y_test, y_pred))

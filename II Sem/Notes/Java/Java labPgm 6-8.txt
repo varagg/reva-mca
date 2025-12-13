@@ -1,0 +1,263 @@
+//Program 6:program to creation of packages importing the user defined packages
+// File: AccessDemo1.java
+package pack1;
+
+class A {
+    private int a = 10;     
+    int b = 20;             
+    protected int c = 30;   
+    public int d = 40;     
+
+    void printabcd() {
+        System.out.println("a = " + a); 
+        System.out.println("b = " + b);
+        System.out.println("c = " + c);
+        System.out.println("d = " + d);
+    }
+}
+
+class B extends A {
+    void printbcd() {
+        
+        // System.out.println("a = " + a);  //Not accessible (private)
+        System.out.println("b = " + b);    
+        System.out.println("c = " + c);    
+        System.out.println("d = " + d);    
+    }
+}
+
+public class AccessDemo1 {
+    public static void main(String[] args) {
+        B x = new B();
+        x.printabcd();  
+        x.printbcd();   
+    }
+}
+
+//File:AccessDemo2.java
+package pack1;  
+
+public class AccessDemo2 {
+    public static void main(String[] args) {
+        A x = new A();
+        // System.out.println(x.a); //private: not accessible
+        System.out.println("b = " + x.b);   
+        System.out.println("c = " + x.c);   
+        System.out.println("d = " + x.d);   
+    }
+}
+
+
+// File: A1.java
+package pack1;
+
+public class A1 {
+    int b = 20;            
+    protected int c = 30;  
+    public int d = 40;    
+}
+
+
+
+
+// File: AccessDemo3.java
+package pack2;   
+
+import pack1.A1;  
+
+class B1 extends A1 {
+    void printcd() {
+        // System.out.println(b);   
+        System.out.println("c = " + c);   
+        System.out.println("d = " + d);   
+    }
+}
+
+
+public class AccessDemo3 {
+    public static void main(String[] args) {
+        B1 x = new B1();
+        x.printcd();
+    }
+}
+
+
+
+// File: AccessDemo4.java
+package pack2;   
+
+import pack1.A1;  
+
+// Non-subclass in different package
+public class AccessDemo4 {
+    public static void main(String[] args) {
+        A1 x = new A1();
+ 
+        // System.out.println("c =" + x.c); //protected not accessible without inheritance
+        System.out.println("d = " + x.d); 
+    }
+}
+
+
+
+//program7:Demonstration of multithreading Using Thread Class and Runnable interface
+
+//Thread Class
+
+class A extends Thread {
+    public void run() {
+        for (int i = 1; i <= 10; i++) {
+            System.out.println("Thread 1: " + i);
+            try {
+                Thread.sleep(500); 
+            } catch (InterruptedException e) {
+                System.out.println("Thread Exception in A");
+            }
+        }
+    }
+}
+
+class B extends Thread {
+    public void run() {
+        for (int i = 1; i <= 10; i++) {
+            System.out.println("Thread 2: " + i);
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                System.out.println("Thread Exception in B");
+            }
+        }
+    }
+}
+
+class C extends Thread {
+    public void run() {
+        for (int i = 1; i <= 10; i++) {
+            System.out.println("Thread 3: " + i);
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                System.out.println("Thread Exception in C");
+            }
+        }
+    }
+}
+
+public class MultipleThread {
+    public static void main(String[] args) {
+        A t1 = new A();
+        B t2 = new B();
+        C t3 = new C();
+        t1.start();
+        t2.start();
+        t3.start();
+    }
+}
+
+
+
+//Runnable Interface
+
+class A implements Runnable {
+    public void run() {
+        for (int i = 1; i <= 10; i++) {
+            System.out.println("Thread 1: " + i);
+            try {
+                Thread.sleep(500); 
+            } catch (InterruptedException e) {
+                System.out.println("Thread Exception in A");
+            }
+        }
+    }
+}
+
+class B implements Runnable {
+    public void run() {
+        for (int i = 1; i <= 10; i++) {
+            System.out.println("Thread 2: " + i);
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                System.out.println("Thread Exception in B");
+            }
+        }
+    }
+}
+
+class C implements Runnable {
+    public void run() {
+        for (int i = 1; i <= 10; i++) {
+            System.out.println("Thread 3: " + i);
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                System.out.println("Thread Exception in C");
+            }
+        }
+    }
+}
+
+public class MultipleRunnable {
+    public static void main(String[] args) {
+        
+        A a = new A();
+        B b = new B();
+        C c = new C();
+        Thread t1 = new Thread(a);
+        Thread t2 = new Thread(b);
+        Thread t3 = new Thread(c);
+        t1.start();
+        t2.start();
+        t3.start();
+    }
+}
+
+
+
+//program8:Demonstration of GUI using Swings
+
+package mca;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class FrameExample {
+
+    public static void main(String[] args) {
+
+        JFrame frame = new JFrame("Add Two Numbers");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(500, 300);
+        frame.setLayout(new FlowLayout());
+
+        JTextField text1 = new JTextField(10);
+        JTextField text2 = new JTextField(10);
+        JButton addButton = new JButton("Add");
+        JLabel resultLabel = new JLabel("Result: ");
+
+        
+        addButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    int num1 = Integer.parseInt(text1.getText());
+                    int num2 = Integer.parseInt(text2.getText());
+                    int sum = num1 + num2;
+                    resultLabel.setText("Result: " + sum);
+                } catch (NumberFormatException ex) {
+                    resultLabel.setText("Invalid input!");
+                }
+            }
+        });
+
+        
+        frame.add(new JLabel("Number 1:"));
+        frame.add(text1);
+        frame.add(new JLabel("Number 2:"));
+        frame.add(text2);
+        frame.add(addButton);
+        frame.add(resultLabel);
+        frame.setVisible(true);
+    }
+}
+

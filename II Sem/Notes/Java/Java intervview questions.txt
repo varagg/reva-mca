@@ -1,0 +1,114 @@
+1. Basic questions :
+
+What is the difference between JDK, JRE, and JVM?
+
+What is the purpose of the main() method in Java?
+
+Explain the concept of OOPs and its principles (Inheritance, Polymorphism, Encapsulation, Abstraction).
+
+What are the data types in Java?
+
+What is the difference between == and .equals() in Java?
+
+
+
+2. Exception Handling:
+
+What is exception handling in Java? How is it implemented?
+
+What is the difference between throw and throws?
+
+What are checked and unchecked exceptions? Provide examples.
+
+
+
+3. Collections Framework:
+
+What is the difference between ArrayList and LinkedList?
+
+How does a HashMap work internally in Java?
+
+What is the difference between Set and List in Java?
+
+
+
+4. Threads and Concurrency:
+
+What is multithreading and how is it achieved in Java?
+
+What is the difference between synchronized and volatile keywords?
+
+Explain wait(), notify(), and notifyAll() methods in Java.
+
+
+5. Java Memory Management:
+
+Explain the memory structure of Java (Heap, Stack, Method Area).
+
+What is garbage collection in Java? How does it work?
+
+6. Advanced Topics:
+
+What is the Singleton design pattern? How can it be implemented in Java?
+
+What is a lambda expression and how is it used in Java?
+
+What is the difference between abstract class and interface in Java?
+
+What are functional interfaces in Java? Provide examples.
+
+Want me to expand on any specific question with sample answers?
+
+
+
+
+7. Inheritance and Polymorphism:
+
+How does method overriding work in Java? Can we override static methods? Why or why not?
+
+What is the difference between method overloading and method overriding? Provide examples.
+
+How can we prevent a class from being inherited? Explain with an example.
+
+What is a covariant return type in method overriding? Provide a practical example.
+
+Explain dynamic method dispatch and how it is implemented in Java.
+
+
+8. Abstraction and Encapsulation:
+
+How does Java implement abstraction? What is the role of abstract classes and interfaces?
+
+Can we achieve 100% abstraction in Java? If yes, how?
+
+What is the purpose of protected access modifier and how does it affect inheritance?
+
+What are the pros and cons of using interfaces versus abstract classes?
+
+How can we achieve data hiding in Java? Give a real-world example.
+
+
+
+9. Object Class and Its Methods:
+
+What is the role of the Object class in Java? What are its commonly overridden methods?
+
+How does the equals() method work internally? How is it different from ==?
+
+What is the significance of hashCode() and equals()? Why must they be overridden together?
+
+What is cloning in Java? How can we implement deep cloning?
+
+How does the finalize() method work? Is it reliable for cleaning up resources? Why or why not?
+
+
+10. More Advanced Concepts:
+
+Can we inherit a constructor in Java? Why or why not?
+
+How can we implement multiple inheritance in Java? Explain using interfaces.
+
+What is the diamond problem in Java? How does Java resolve it?
+
+What is the role of the super keyword? Can we use it in a static context?
+

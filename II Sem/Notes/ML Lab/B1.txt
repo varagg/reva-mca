@@ -1,0 +1,60 @@
+B1 
+
+# B1: Decision Tree (ID3) on Iris
+
+# 1) Imports
+import pandas as pd
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier, export_text, plot_tree
+import matplotlib.pyplot as plt
+
+# 2) Load dataset
+iris = load_iris()
+X = iris.data                         # features (4 columns)
+y = iris.target                       # labels: 0=setosa, 1=versicolor, 2=virginica
+
+# Optional: See data as DataFrame
+df = pd.DataFrame(X, columns=iris.feature_names)
+df['target'] = y
+print("Head of data:")
+print(df.head())
+
+# 3) Train-test split
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+# 4) Build the model (ID3 = entropy)
+clf = DecisionTreeClassifier(criterion='entropy', random_state=42)
+
+# 5) Train (fit)
+clf.fit(X_train, y_train)
+
+# 6) Predict on test set
+y_pred = clf.predict(X_test)
+
+# 7) Evaluate accuracy
+acc = clf.score(X_test, y_test)
+print(f"Accuracy: {acc:.2f}")
+
+# 8) Visualize tree
+plt.figure(figsize=(10, 6))
+plot_tree(
+    clf,
+    filled=True,
+    feature_names=iris.feature_names,
+    class_names=iris.target_names,
+    rounded=True
+)
+plt.title("Decision Tree (ID3 - entropy) on Iris")
+plt.show()
+
+# 9) Print readable tree rules
+print("\nTree structure (rules):")
+print(export_text(clf, feature_names=iris.feature_names))
+
+# 10) Classify a new sample (example)
+sample = [[5.0, 3.6, 1.4, 0.2]]   # sepal length, sepal width, petal length, petal width
+pred_label = clf.predict(sample)[0]
+print("Prediction for new sample:", iris.target_names[pred_label])
