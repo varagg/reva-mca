@@ -1,69 +1,112 @@
-# 📘 Reva MCA – Question Papers & Resources
+# 📘 REVA MCA – Previous Year Question Papers & Academic Resources
 
-Welcome to the **Reva MCA Resources Repository**!
+Welcome to the **REVA MCA Resources Repository**.
 
-This repository is created to help **current and future MCA students at REVA University** easily access **previous year question papers, study materials, and academic resources** in one organized place.
+This repository contains **complete academic resources from my MCA batch at REVA University**, organized **semester-wise**.  
+It is created to help juniors with **exam preparation, assignments, lab work, and overall academic understanding**.
+
+All materials including **subject notes, PDFs, assignment questions, lab programs, IA question papers, and SEE papers** are now available.
 
 ---
 
 ## 🎯 Purpose of This Repository
 
-This repo aims to:
+This repository aims to:
 
-- Provide **quick access** to previous year question papers (PYQs)
-- Help juniors understand **exam patterns, repeated topics, and difficulty levels**
-- Organize **notes, study guides, and reference materials** for each subject
-- Build a **centralized academic resource hub** for MCA students
-- Support effective **self-study, revision, and exam preparation**
+- Provide **easy access to MCA previous year question papers**
+- Share **complete subject notes and reference PDFs**
+- Help with **Internal Assessments (IA1 & IA2) and SEE preparation**
+- Support **lab programs, assignments, and project understanding**
+- Serve as a **centralized academic resource hub** for REVA MCA students
 
 ---
 
 ## 📂 Repository Structure
 
-You will find:
-
-- **Semester-wise question papers**
-- **Subject-specific notes & reference PDFs**
-- **Important questions & assignments**
-- **Useful external resources and links**
-
-Everything is neatly arranged for easy navigation.
+reva-mca/
+│
+├── I Sem/
+│   ├── Notes/
+│   │   ├── Subject Notes
+│   │   ├── PDFs
+│   │   └── Reference Materials
+│   │
+│   ├── IA1/
+│   │   └── IA-1 Question Papers (Our Batch)
+│   │
+│   ├── IA2/
+│   │   └── IA-2 Question Papers (Our Batch)
+│   │
+│   ├── SEE/
+│   │   └── End Semester Examination Question Papers
+│   │
+│   └── Lab/
+│       └── Lab Programs & Practicals
+│
+├── II Sem/
+│   ├── Notes/
+│   │   ├── Subject Notes
+│   │   ├── PDFs
+│   │   └── Reference Materials
+│   │
+│   ├── IA1/
+│   │   └── IA-1 Question Papers (Our Batch)
+│   │
+│   ├── IA2/
+│   │   └── IA-2 Question Papers (Our Batch)
+│   │
+│   ├── SEE/
+│   │   └── End Semester Examination Question Papers
+│   │
+│   └── Lab/
+│       └── Lab Programs & Practicals
+│
+├── III Sem/
+│   └── Notes / IA / SEE / Lab (Updated or To Be Updated)
+│
+├── IV Sem/
+│   └── Notes / IA / SEE / Lab (Updated or To Be Updated)
+│
+└── README.md
 
 ---
 
-## 🧭 How To Use
+## 🧭 How to Use This Repository
 
-1. Open the relevant semester or subject folder  
-2. Download the required PDF or material  
-3. Use it for revision, assignments, or exam prep  
-4. ⭐ Star the repo if it helped you  
-5. Share it with your classmates and juniors  
+1. Navigate to your **semester folder**
+2. Use the **Notes** folder for PDFs and study materials
+3. Refer **IA1 / IA2 / SEE** folders for exam question papers
+4. Use the **Lab** folder for programs and practicals
+5. ⭐ Star the repository if it helps you
+6. Share it with your classmates and juniors
 
 ---
 
 ## 🤝 Contributing
 
-This is a community-friendly repository.  
-If you want to contribute:
+This is a **student-driven academic repository**.
 
-1. Fork the repository  
-2. Add your files or improvements  
+If you want to contribute:
+1. Fork the repository
+2. Add useful materials (notes, papers, programs, resources)
 3. Create a **pull request**
 
-Your contributions will help future batches of MCA students!
+Your contribution can help many future MCA batches.
 
 ---
 
 ## 📢 Disclaimer
 
-All content is shared **only for educational purposes**.  
-If any file needs to be updated or removed, please open an issue or contact the maintainer.
+All materials shared here are **strictly for educational purposes only**.  
+If any content needs correction or removal, please open an issue or contact the maintainer.
 
 ---
 
 ## 🧑‍💻 Maintainer
 
 **Varag**  
-Instagram: [@i_varag](https://www.instagram.com/i_varag/)
+Instagram: [@i_varag](https://instagram.com/i_varag)
 
 ---
+
+Wishing you all the best for your academics and exams! 🎓📚
