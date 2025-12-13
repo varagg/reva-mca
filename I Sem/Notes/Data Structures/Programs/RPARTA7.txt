@@ -1,0 +1,80 @@
+/* Part - A 7 Develop a program to sort a list of
+	 N elements using  quicksort */
+
+#include<stdio.h>
+#include<conio.h>
+
+void quicksort(int [],int,int);
+int partition(int [],int,int);
+
+ void main()
+   {
+     int a[100],n,i;
+     clrscr();
+     printf("enter the size of an array \n");
+     scanf("%d",&n);
+     printf("enter the array elements \n");
+     for(i = 0; i < n ; i++)
+      {
+	 scanf("%d",&a[i]);
+      }
+      printf(" original array \n");
+      for(i = 0; i < n; i++)
+       {
+	  printf("%d \n",a[i]);
+       }
+      quicksort(a,0,n - 1);
+      printf("sorted array \n");
+      for(i = 0; i < n ; i++)
+       {
+	 printf("%d \n",a[i]);
+       }
+       getch();
+    }
+
+    void quicksort(int a[],int low,int high)
+       {
+	  int j;
+
+	  if(low < high)
+	   {
+	      j = partition(a,low,high);
+	      quicksort(a,low,j - 1);
+	      quicksort(a,j + 1,high);
+	   }
+       }
+
+     int partition(int a[],int low,int high)
+	{
+	   int temp,key,i,j;
+	   key = a[low];
+	   i = low + 1;
+	   j = high;
+	   while(i <= j)
+	    {
+	      while(key >= a[i])
+		{
+		   i++;
+		}
+	      while(key < a[j])
+		{
+		   j--;
+		}
+
+		if(i < j)
+		  {
+		     temp = a[i];
+		     a[i] = a[j];
+		     a[j] = temp;
+		  }
+	    }
+	     if(a[j] < a[low])
+	       {
+		  temp = a[low];
+		  a[low] = a[j];
+		  a[j] = temp;
+	       }
+		return j;
+	  }
+
+

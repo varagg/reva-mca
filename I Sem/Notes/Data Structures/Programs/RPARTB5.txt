@@ -1,0 +1,88 @@
+/* Part - B 5 Develop a program to sort a list of
+	 N elements using  insertion sort using function*/
+
+#include<stdio.h>
+#include<conio.h>
+
+viod insertion_sort(int a[], int n)
+{
+  int pass,key,j;
+
+  for(pass = 1; pass < n; pass++)
+       {
+	  key = a[pass];
+	  for(j = pass-1; j >= 0 && key < a[j]; j--)
+	   {
+	      a[j + 1] = a[j];
+	   }
+	   a[j + 1] = key;
+       }
+}
+
+void main()
+   {
+     int a[20],n,i;
+     clrscr();
+     printf("enter the size of an array \n");
+     scanf("%d",&n);
+     printf("enter the array elements \n");
+     for(i = 0; i < n ; i++)
+      {
+	 scanf("%d",&a[i]);
+      }
+      printf("entered elements are \n");
+      for(i = 0; i < n; i++)
+       {
+	  printf("%4d",a[i]);
+       }
+      insertion_sort(a,n);
+      printf("\nsorted array \n");
+      for(i = 0; i < n ; i++)
+       {
+	 printf("%4d",a[i]);
+       }
+       getch();
+    }
+
+****************************************************************************
+
+/* Part - B 5 Develop a program to sort a list of
+	 N elements using  insertion sort  without using function*/
+
+#include<stdio.h>
+#include<conio.h>
+
+ void main()
+   {
+     int a[20],n,i,j,key,pass;
+     clrscr();
+     printf("enter the size of an array \n");
+     scanf("%d",&n);
+     printf("enter the array elements \n");
+     for(i = 0; i < n ; i++)
+      {
+	 scanf("%d",&a[i]);
+      }
+      printf("entered elements are \n");
+      for(i = 0; i < n; i++)
+       {
+	  printf("%4d",a[i]);
+       }
+      for(pass = 1; pass < n; pass++)
+       {
+	  key = a[pass];
+	  for(j = pass-1; j >= 0 && key < a[j]; j--)
+	   {
+	      a[j + 1] = a[j];
+	   }
+	   a[j + 1] = key;
+       }
+      printf("\nsorted array \n");
+      for(i = 0; i < n ; i++)
+       {
+	 printf("%4d",a[i]);
+       }
+       getch();
+    }
+
+
